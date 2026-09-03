@@ -1,123 +1,114 @@
 ---
 seo:
-  title: Write beautiful docs with Markdown
-  description: Ship fast, flexible, and SEO-optimized documentation with beautiful
-    design out of the box. Docus brings together the best of the Nuxt ecosystem.
-    Powered by Nuxt UI.
+  title: GO Shortener Documentation
+  description: High-performance, ultra-lightweight, and fully self-contained URL shortener in pure Go with pure Go SQLite WAL, zero-compile deployment, and embedded assets.
 ---
 
 ::u-page-hero
 #title
-Write beautiful docs with Markdown
+GO Shortener
 
 #description
-Ship fast, flexible, and SEO-optimized documentation with beautiful design out of the box.
-
-Docus brings the best of the Nuxt ecosystem into one CLI.
+High-performance, ultra-lightweight, and fully self-contained URL shortener written in pure Go. Compiles into a single ~13MB standalone executable with embedded assets and a sub-0.5MB runtime memory footprint.
 
 #links
   :::u-button
   ---
-  color: neutral
+  color: primary
   size: xl
-  to: /getting-started/installation
+  to: /introduction/what-is-go
   trailing-icon: i-lucide-arrow-right
   ---
-  Get started
+  Get Started
   :::
 
   :::u-button
   ---
   color: neutral
-  icon: simple-icons-github
+  icon: i-simple-icons-github
   size: xl
-  to: https://github.com/nuxt-content/docus
+  target: _blank
+  to: https://github.com/ItsARCn/Go-shortner
   variant: outline
   ---
-  Star on GitHub
+  View on GitHub
   :::
 ::
 
 ::u-page-section
 #title
-Shipped with many features
+Core Architectural Highlights
 
 #features
   :::u-page-feature
   ---
-  icon: i-simple-icons-nuxt
-  target: _blank
-  to: https://nuxt.com
+  icon: i-lucide-cpu
+  to: /developer/architecture
   ---
   #title
-  Built with [Nuxt 4]{.text-primary}
+  [< 0.5 MB RAM Footprint]{.text-primary}
   
   #description
-  Optimized by the most famous Vue framework. Docus gives you everything you need to build fast, performant, and SEO-friendly websites.
+  Ultra-efficient runtime designed specifically for resource-constrained 1 GB RAM VPS environments. Compiles to a single ~13 MB binary.
   :::
 
   :::u-page-feature
   ---
-  icon: i-simple-icons-nuxt
-  target: _blank
-  to: https://ui.nuxt.com/
+  icon: i-lucide-package
+  to: /developer/architecture
   ---
   #title
-  Powered by [Nuxt UI]{.text-primary}
+  [100% Standalone (embed.FS)]{.text-primary}
   
   #description
-  Beautiful out of the box, minimal by design but highly customizable. Docus leverages Nuxt UI to give you the best docs writing experience with zero boilerplate, just focus on your content.
+  Frontend HTML, CSS, JavaScript, and static assets are embedded directly into the Go executable. Zero external web server or Node runtime required.
   :::
 
   :::u-page-feature
   ---
-  icon: i-simple-icons-nuxt
-  target: _blank
-  to: https://content.nuxt.com
+  icon: i-lucide-database
+  to: /developer/database
   ---
   #title
-  Enhanced Markdown syntax by [Nuxt Content]{.text-primary}
+  [Pure Go SQLite (CGO-Free)]{.text-primary}
   
   #description
-  The only thing you need to take care about is writing your content. Write your pages in Markdown and extend with MDC syntax to embed Nuxt UI or custom Vue components. Structure, routing, and rendering are handled for you.
+  Powered by `modernc.org/sqlite` with Write-Ahead Logging (WAL) and single-writer concurrency controls to prevent database contention.
   :::
 
   :::u-page-feature
   ---
-  icon: i-simple-icons-nuxt
-  target: _blank
-  to: https://nuxt.com/docs/guide/directory-structure/app-config
+  icon: i-lucide-shield-alert
+  to: /user-guide/creating-a-short-link
   ---
   #title
-  Customize with [Nuxt App Config]{.text-primary}
+  [SSRF & Anti-Recursion Shield]{.text-primary}
   
   #description
-  Update colors, social links, header logos and component styles globally using the `app.config.ts`, no direct code modifications required.
+  Blocks loopback, RFC1918 private subnets, cloud metadata IPs (169.254.169.254), self-domain recursion, and unsafe schemes (javascript:, file:).
   :::
 
   :::u-page-feature
   ---
-  icon: i-simple-icons-nuxt
-  target: _blank
-  to: https://content.nuxt.com/studio
+  icon: i-lucide-layers
+  to: /user-guide/expiration
   ---
   #title
-  Edit in production with [Nuxt Studio]{.text-primary}
+  [Dual-Tier Quota Engine]{.text-primary}
   
   #description
-  Edit your content in production with zero Markdown knowledge required. Let your non technical colleagues collaborate on the documentation and integrate Vue components without code skills.
+  15 links/24h for anonymous guests (max 7 days expiration) and 100 links/month for registered users (up to 1 year expiration) with renewal preservation.
   :::
 
   :::u-page-feature
   ---
-  icon: i-simple-icons-nuxt
-  target: _blank
-  to: https://ui.nuxt.com/components/content-search
+  icon: i-lucide-bar-chart-3
+  to: /user-guide/analytics
   ---
   #title
-  Built-in navigation and [full-text search]{.text-primary}
+  [Privacy-First Analytics]{.text-primary}
   
   #description
-  Only focus on ordering your content, Docus handles the search modal and auto-generates the side navigation for you.
+  Aggregates clicks, device breakdowns, browser share, OS, and referrers using SHA-256 identity hashing. Never stores raw visitor IP addresses.
   :::
 ::

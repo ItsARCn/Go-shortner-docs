@@ -1,6 +1,6 @@
 I want you to create a complete documentation website for my project "GO Shortener".
 
-Use the official Docus repository as the documentation framework/reference:
+Use the official Docus repository as the documentation framework/reference: all thing is in the folder read README.md and content/
 https://github.com/nuxt-content/docus
 
 The documentation site will eventually be deployed to Vercel.

@@ -1,82 +1,123 @@
-# Docus Default Starter
+# GO Documentation
 
-> A beautiful, minimal starter for creating documentation with Docus
+[![Nuxt](https://img.shields.io/badge/Nuxt-4.x-00DC82?style=flat&logo=nuxt.js)](https://nuxt.com)
+[![Docus](https://img.shields.io/badge/Docus-v4-00DC82?style=flat)](https://docus.dev)
+[![Nuxt UI](https://img.shields.io/badge/Nuxt_UI-v3-00DC82?style=flat)](https://ui.nuxt.com)
+[![Deployment](https://img.shields.io/badge/Deploy-Vercel-black?style=flat&logo=vercel)](https://vercel.com)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-This is the default Docus starter template that provides everything you need to build beautiful documentation sites with Markdown and Vue components.
+The official documentation website for **[GO Shortener](https://github.com/ItsARCn/Go-shortner)**, deployed at **[docs.arcn.online](https://docs.arcn.online)**.
 
-> [!TIP]
-> If you're looking for i18n support, check out the [i18n starter](https://github.com/nuxt-themes/docus/tree/main/.starters/i18n).
+Built on top of the official **Docus** documentation framework powered by Nuxt 4, Nuxt Content v3, and Nuxt UI.
+
+---
 
 ## ✨ Features
 
-- 🎨 **Beautiful Design** - Clean, modern documentation theme
-- 📱 **Responsive** - Mobile-first responsive design  
-- 🌙 **Dark Mode** - Built-in dark/light mode support
-- 🔍 **Search** - Full-text search functionality
-- 📝 **Markdown Enhanced** - Extended markdown with custom components
-- 🎨 **Customizable** - Easy theming and brand customization
-- ⚡ **Fast** - Optimized for performance with Nuxt 4
-- 🔧 **TypeScript** - Full TypeScript support
+- ⚡ **Nuxt 4 & Docus Layer**: Fast, optimized, and SEO-ready documentation platform.
+- 🎨 **Modern Design**: Clean typography and styling matching the GO Shortener brand.
+- 📱 **Fully Responsive**: Mobile-first layout with smooth navigation drawers and aside bars.
+- 🌙 **Dark & Light Mode**: Built-in instant theme switching.
+- 🔍 **Full-Text Documentation Search**: Native Docus static client search across all pages without external search vendors or AI dependencies.
+- 🛡️ **Zero AI Runtime**: Strictly deterministic documentation with no runtime AI models, chatbots, or gateway tokens.
+- 🚀 **Vercel Optimized**: Configured for instant deployment on Vercel.
 
-## 🚀 Quick Start
+---
 
+## 📁 Documentation Structure
+
+```text
+content/
+├── index.md                   # Documentation Landing Page
+├── 1.introduction/            # What is GO? & Features Matrix
+├── 2.getting-started/         # Installation, Configuration, First Setup, Updating
+├── 3.user-guide/              # Creating Links, Expiration, Renewals, Dashboard, Analytics
+├── 4.authentication/          # Email Login, Google OAuth, Firebase Setup
+├── 5.captcha/                 # Cloudflare Turnstile Bot Protection
+├── 6.administration/          # Admin Panel, Users, Links, Reports, Bans & Timeouts, Audit Logs
+├── 7.deployment/              # VPS Installation, Env Vars, Cloudflare Tunnel, Systemd, Updating
+├── 8.developer/               # Architecture, API Design, SQLite WAL Database, Development, Releases
+└── 9.reference/               # Configuration Reference, API Reference, Changelog
+```
+
+---
+
+## 🚀 Quick Start (Local Development)
+
+### Prerequisites
+- [Node.js](https://nodejs.org/) v18.18+ or v20+
+- `npm` (or `pnpm` / `bun`)
+
+### Setup & Run
 ```bash
-# Install dependencies
+# 1. Install dependencies
 npm install
 
-# Start development server
+# 2. Start local development server
 npm run dev
 ```
 
-Your documentation site will be running at `http://localhost:3000`
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the documentation with hot module reloading.
 
-## 📁 Project Structure
+---
 
-```
-my-docs/
-├── content/              # Your markdown content
-│   ├── index.md         # Homepage
-│   ├── 1.getting-started/  # Getting started section
-│   └── 2.essentials/    # Essential documentation
-├── public/              # Static assets
-└── package.json         # Dependencies and scripts
-```
+## 📦 Production Build
 
-## ⚡ Built with
-
-This starter comes pre-configured with:
-
-- [Nuxt 4](https://nuxt.com) - The web framework
-- [Nuxt Content](https://content.nuxt.com/) - File-based CMS
-- [Nuxt UI](https://ui.nuxt.com) - UI components
-- [Nuxt Image](https://image.nuxt.com/) - Optimized images
-- [Tailwind CSS 4](https://tailwindcss.com/) - Utility-first CSS
-- [Docus Layer](https://www.npmjs.com/package/docus) - Documentation theme
-
-## 📖 Documentation
-
-For detailed documentation on customizing your Docus project, visit the [Docus Documentation](https://docus.dev)
-
-### 🤖 AI Assistant Skill
-
-Get started quickly with Docus by adding specialized knowledge to your AI assistant (Cursor, Claude, etc.):
+To compile the documentation project for production:
 
 ```bash
-npx skills add nuxt-content/docus
-```
-
-This skill helps you create documentation faster by providing your AI assistant with best practices, MDC component usage, ready-to-use templates, writing guidelines, and configuration tips for Docus. Perfect for quickly scaffolding new documentation projects.
-
-## 🚀 Deployment
-
-Build for production:
-
-```bash
+# Generate production server build
 npm run build
+
+# Preview the built application locally
+npm run preview
 ```
 
-The built files will be in the `.output` directory, ready for deployment to any hosting provider that supports Node.js.
+The output files are generated in `.output/`, optimized for high-performance serverless or Node.js hosting.
+
+---
+
+## 🌐 Deploying to Vercel
+
+The documentation project is pre-configured for deployment to **Vercel**:
+
+### Option 1: Deploy via Vercel Dashboard (Recommended)
+
+1. Push this repository to GitHub (`ItsARCn/Go-shortner-docs`).
+2. Log into the [Vercel Dashboard](https://vercel.com) and click **Add New Project**.
+3. Import the `Go-shortner-docs` repository.
+4. Vercel automatically detects **Nuxt.js**:
+   - **Framework Preset**: `Nuxt`
+   - **Build Command**: `npm run build`
+   - **Output Directory**: `.output`
+5. Click **Deploy**.
+
+### Option 2: Deploy via Vercel CLI
+
+```bash
+# Install Vercel CLI globally
+npm i -g vercel
+
+# Deploy to preview
+vercel
+
+# Deploy to production
+vercel --prod
+```
+
+### Configuring Custom Domain (`docs.arcn.online`)
+
+1. In your Vercel Project Settings, navigate to **Domains**.
+2. Add `docs.arcn.online`.
+3. In your Cloudflare DNS settings for `arcn.online`:
+   - Add a `CNAME` record:
+     - **Name**: `docs`
+     - **Target**: `cname.vercel-dns.com`
+     - **Proxy status**: DNS only (or Proxied with Full SSL)
+4. Once verified, your documentation will be live at `https://docs.arcn.online`.
+
+---
 
 ## 📄 License
 
-[MIT License](https://opensource.org/licenses/MIT) # Go-shortner-docs
+This documentation project is licensed under the [MIT License](LICENSE).

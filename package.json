@@ -1,12 +1,17 @@
 {
-  "name": "Go-shortner-docs",
+  "name": "go-shortner-docs",
+  "version": "1.0.0",
+  "description": "Official documentation for GO Shortener",
+  "private": true,
   "scripts": {
     "dev": "nuxt dev",
-    "build": "nuxt build"
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
   },
   "dependencies": {
-    "docus": "latest",
     "better-sqlite3": "^12.11.1",
+    "docus": "latest",
     "nuxt": "^4.4.8"
   }
 }
