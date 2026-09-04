@@ -1,7 +1,7 @@
 ---
 seo:
-  title: Write beautiful docs with Markdown
-  description: Ship fast, flexible, and SEO-optimized documentation with beautiful design out of the box. Docus brings together the best of the Nuxt ecosystem. Powered by Nuxt UI.
+  title: GO Documentation - Ultra-Lightweight URL Shortener
+  description: High-performance, self-contained URL shortener in pure Go with sub-0.5MB RAM idle footprint, CGO-free SQLite WAL, and enterprise anti-abuse protection.
 ---
 
 ::u-page-hero
@@ -12,15 +12,14 @@ seo:
   to: /getting-started/installation
   variant: outline
   ---
-  Documentation →
+  v1.0.0 Self-Hosted Release →
   :::
 
 #title
-Write beautiful docs with Markdown.
+Ultra-Lightweight, Self-Contained URL Shortener.
 
 #description
-Ship fast, flexible, and SEO-optimized documentation with beautiful design out of the box.  
-Docus brings the best of the Nuxt ecosystem.
+Engineered in pure Go with an embedded frontend, sub-0.5MB idle RAM footprint, CGO-free SQLite WAL, and enterprise-grade anti-abuse security.
 
 #links
   :::u-button
