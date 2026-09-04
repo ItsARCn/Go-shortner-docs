@@ -86,7 +86,7 @@ function copyApiCode() {
 </script>
 
 <template>
-  <UPageSection>
+  <UPageSection :ui="{ container: 'pt-2 sm:pt-4 lg:pt-4 pb-16 sm:pb-24 gap-8' }">
     <UPageGrid>
       <!-- ==================== CARD 1: Sub-0.5MB RAM Footprint ==================== -->
       <UPageCard

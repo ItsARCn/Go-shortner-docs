@@ -1,0 +1,28 @@
+/* Spotlight mouse hover glow effect */
+[data-slot="root"]:has(> [data-slot="spotlight"]) {
+  position: relative;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+[data-slot="root"]:has(> [data-slot="spotlight"])::before {
+  opacity: 0;
+  transition: opacity 0.25s ease-out;
+  pointer-events: none;
+}
+
+[data-slot="root"]:has(> [data-slot="spotlight"]):hover::before {
+  opacity: 1;
+}
+
+[data-slot="root"]:has(> [data-slot="spotlight"]):hover {
+  --spotlight-size: 550px;
+}
+
+/* Eliminate excessive empty gap between Hero CTA buttons and Bento Grid Cards */
+[data-slot="root"]:has(> [data-slot="container"] [data-slot="headline"]) > [data-slot="container"] {
+  padding-bottom: 2rem !important; /* reduced from 10rem (160px) */
+}
+
+[data-slot="root"]:has(> [data-slot="container"] .relative.grid) > [data-slot="container"] {
+  padding-top: 1rem !important; /* reduced from 8rem (128px) */
+}

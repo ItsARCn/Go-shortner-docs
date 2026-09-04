@@ -4,7 +4,7 @@ seo:
   description: High-performance, self-contained URL shortener in pure Go with sub-0.5MB RAM idle footprint, CGO-free SQLite WAL, and enterprise anti-abuse protection.
 ---
 
-::u-page-hero
+::u-page-hero{:ui="{ container: 'pt-14 sm:pt-18 lg:pt-20 pb-4 sm:pb-6 lg:pb-6 gap-6 sm:gap-y-8' }"}
 #headline
   :::u-button
   ---
