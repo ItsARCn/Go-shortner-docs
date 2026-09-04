@@ -24,12 +24,12 @@ export default defineAppConfig({
     },
     pageHero: {
       slots: {
-        container: 'flex flex-col lg:grid pt-16 sm:pt-20 lg:pt-24 pb-4 sm:pb-6 lg:pb-6 gap-6 sm:gap-y-8',
+        container: 'flex flex-col lg:grid pt-14 sm:pt-18 lg:pt-20 pb-8 sm:pb-10 lg:pb-12 gap-6 sm:gap-y-8',
       },
     },
     pageSection: {
       slots: {
-        container: 'flex flex-col lg:grid pt-0 sm:pt-2 lg:pt-4 pb-16 sm:pb-24 lg:pb-32 gap-8 sm:gap-16',
+        container: 'flex flex-col lg:grid pt-2 sm:pt-4 lg:pt-6 pb-16 sm:pb-24 lg:pb-32 gap-8 sm:gap-16',
       },
     },
   },

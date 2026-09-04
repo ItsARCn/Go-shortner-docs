@@ -12,7 +12,7 @@ Built on top of the official **Docus** documentation framework powered by Nuxt 4
 
 ---
 
-## ✨ Features
+## ✨ Features  
 
 - ⚡ **Nuxt 4 & Docus Layer**: Fast, optimized, and SEO-ready documentation platform.
 - 🎨 **Modern Design**: Clean typography and styling matching the GO Shortener brand.
