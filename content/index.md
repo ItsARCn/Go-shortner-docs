@@ -5,6 +5,7 @@ seo:
 ---
 
 ::u-page-hero{:ui="{ container: 'pt-14 sm:pt-18 lg:pt-20 pb-4 sm:pb-6 lg:pb-6 gap-6 sm:gap-y-8' }"}
+::u-page-hero
 #headline
   :::u-button
   ---
